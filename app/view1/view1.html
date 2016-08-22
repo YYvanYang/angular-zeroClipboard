@@ -1,0 +1,18 @@
+<p>This is the partial for view 1.</p>
+
+<h1>Demo for angular zeroclipboard</h1>
+
+
+<div>
+    <h1>Copy from input</h1>
+    <label for="">input: <input type="text" ng-model="input" id="input1"></label>
+    <button jm-zeroclipboard zeroclip-copied="complete($event)" zeroclip-on-error="clipError($event)" zeroclip-model="input" >Copy</button>
+    <span ng-show="copied">Copied!</span>
+</div>
+
+<div>
+    <h1>Copy interpolated text</h1>
+    <span>This will copy: "This input text: {{ input }}"</span>
+    <button jm-zeroclipboard zeroclip-copied="copiedText=true" zeroclip-text="This input text: {{ input }}" >Copy</button>
+    <span ng-show="copiedText">Copied!</span>
+</div>
