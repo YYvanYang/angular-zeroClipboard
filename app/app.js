@@ -7,7 +7,7 @@ angular.module('myApp', [
   'myApp.view2',
   'myApp.version'
   ,'jm.zeroclipboard'
-
+   ,'jm.fullscreen'
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
   $locationProvider.hashPrefix('!');

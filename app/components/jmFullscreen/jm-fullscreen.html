@@ -1,0 +1,7 @@
+<button ng-click="open()">open</button>
+<div class="overlay" ng-class="{'show': isOpen}">
+    <a href="javascript:void(0)" class="closebtn" ng-click="close()">&times;</a>
+    <div class="overlay-content">
+        <div ng-transclude></div>
+    </div>
+</div>
