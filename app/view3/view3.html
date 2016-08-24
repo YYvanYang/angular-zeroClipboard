@@ -1,3 +1,6 @@
+<div>
+    example 1
+</div>
 <!-- Trigger/Open The Modal -->
 <button ng-click="open()">Open Modal</button>
 
@@ -12,6 +15,28 @@
         </div>
         <div class="modal-body">
             <p>Some text in the Modal Body</p>
+            <p>Some other text...</p>
+        </div>
+        <div class="modal-footer">
+            <h3>Modal Footer</h3>
+        </div>
+    </div>
+
+</div>
+
+<div>
+    example 2
+</div>
+<div id="myModal2" class="modal2" fullscreen="isFullscreen2" ng-click="closeBybackdrop2($event)">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <div class="modal-header">
+            <span ng-click="toggleFullScreen2()">fullscreen</span><span ng-click="close2()" class="close">×</span>
+            <h2>Non-Modal Header</h2>
+        </div>
+        <div class="modal-body">
+            <p>normal flow Some text in the Modal Body</p>
             <p>Some other text...</p>
         </div>
         <div class="modal-footer">

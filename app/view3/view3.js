@@ -45,5 +45,36 @@ angular.module('myApp.view3', ['ngRoute'])
             }
         }
 
+        // non-Modal begin
+
+        var modal2 = document.getElementById('myModal2');
+        var $modal2 = angular.element(modal);
+
+        // Initially, do not go into full screen
+        $scope.isFullscreen2 = false;
+
+        $scope.toggleFullScreen2 = function() {
+            $scope.isFullscreen2 = !$scope.isFullscreen2;
+        }
+
+        // When the user clicks on the button, open the modal
+
+
+        // When the user clicks on <span> (x), close the modal
+        $scope.close2 = function () {
+            $modal2.css('display', 'none');
+            $scope.isFullscreen2 = false;
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        $scope.closeBybackdrop2 = function (event) {
+            if (event.target == modal) {
+                $modal2.css('display', 'none');
+                $scope.isFullscreen2 = false;
+            }
+        }
+
+        // non-Modal end
+
     }]);
 
