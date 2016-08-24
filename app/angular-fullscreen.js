@@ -71,13 +71,23 @@
           // Watch for changes on scope if model is provided
           if ($attrs.fullscreen) {
             $scope.$watch($attrs.fullscreen, function(value) {
-              var isEnabled = Fullscreen.isEnabled();
-              if (value && !isEnabled) {
-                Fullscreen.enable($element[0]);
-                $element.addClass('isInFullScreen');
-              } else if (!value && isEnabled) {
-                Fullscreen.cancel();
-                $element.removeClass('isInFullScreen');
+              if (Fullscreen.isSupported()) {
+                var isEnabled = Fullscreen.isEnabled();
+                if (value && !isEnabled) {
+                  Fullscreen.enable($element[0]);
+                  $element.addClass('isInFullScreen');
+                } else if (!value && isEnabled) {
+                  Fullscreen.cancel();
+                  $element.removeClass('isInFullScreen');
+                }
+              } else {
+                var isInFullScreen = $element.hasClass('isInFullScreen');
+                if (value && !isInFullScreen) {
+                  $element.addClass('isInFullScreen')
+
+                }else if (!value && isInFullScreen) {
+                  $element.removeClass('isInFullScreen')
+                }
               }
             });
 

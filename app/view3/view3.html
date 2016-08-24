@@ -1,13 +1,13 @@
 <!-- Trigger/Open The Modal -->
-<button id="myBtn">Open Modal</button>
+<button ng-click="open()">Open Modal</button>
 
 <!-- The Modal -->
-<div id="myModal" class="modal">
+<div id="myModal" class="modal" fullscreen="isFullscreen" ng-click="closeBybackdrop($event)">
 
     <!-- Modal content -->
-    <div id="my-modal-content" class="modal-content">
+    <div class="modal-content">
         <div class="modal-header">
-            <span style="display: inline-block;" ng-click="goFullscreen()">fullscreen</span><span id="close" class="close">×</span>
+            <span ng-click="toggleFullScreen()">fullscreen</span><span ng-click="close()" class="close">×</span>
             <h2>Modal Header</h2>
         </div>
         <div class="modal-body">
