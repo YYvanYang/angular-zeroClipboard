@@ -8,7 +8,6 @@ angular.module('myApp', [
     'myApp.view3',
   'myApp.version'
   ,'jm.zeroclipboard'
-   ,'jm.fullscreen'
     ,'FBAngular'
     ,'jm.infiniteScroll'
 ]).

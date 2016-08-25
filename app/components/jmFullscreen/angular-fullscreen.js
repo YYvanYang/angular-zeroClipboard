@@ -122,7 +122,7 @@
   };
 
   if (typeof define === "function" && define.amd) {
-    define("FBAngular", ['angular'], function (angular) { return createModule(angular); } );
+    define("FBAngular", ['../../bower_components/angular/angular'], function (angular) { return createModule(angular); } );
   } else if (typeof module !== 'undefined' && module.exports) {
     module.exports = createModule(window.angular).name;
   } else {
