@@ -10,6 +10,7 @@ angular.module('myApp', [
   ,'jm.zeroclipboard'
    ,'jm.fullscreen'
     ,'FBAngular'
+    ,'jm.infiniteScroll'
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
   $locationProvider.hashPrefix('!');

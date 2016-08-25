@@ -4,19 +4,17 @@
   {{ 'Current version is v%VERSION%.' | interpolate }}
 </p>
 
-<div>
-  <h1>fullscreen</h1>
-  <div jm-fullscreen>
-    <!--ng-transclude issue:-->
-    <!--if it is no parent container(div) for a tags, it will throw bellow errors in IE8-->
-    <!--TypeError: Object doesn't support this property or method-->
-    <div>
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Clients</a>
-        <a href="#">Contact</a>
-    </div>
+<h1>scroll demo</h1>
 
-  </div>
+<div class="list-container">
+    <ul id="myUL" jm-infinite-scroll interval="50">
+        <li>Hit the gym</li>
+        <li class="checked">Pay bills</li>
+        <li>Meet George</li>
+        <li>Buy eggs</li>
+        <li>Read a book</li>
+        <li>Organize office</li>
+    </ul>
 </div>
+
 
