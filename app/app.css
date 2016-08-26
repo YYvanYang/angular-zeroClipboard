@@ -67,3 +67,37 @@ ul li:nth-child(odd) {
 ul li:hover {
   background: #ddd;
 }
+
+/*div.table {*/
+  /*height:200px;*/
+  /*overflow: hidden;*/
+  /*position: relative;*/
+/*}*/
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+
+}
+
+
+th, td {
+  border: none;
+  text-align: left;
+  padding: 8px;
+  width:80px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2;}
+
+div.table {
+  height: 250px;
+  overflow: hidden;
+}
+
+
+
+
+
