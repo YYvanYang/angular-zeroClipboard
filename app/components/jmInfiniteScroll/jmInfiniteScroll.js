@@ -4,11 +4,12 @@
 'use strict';
 
 angular.module('jm.infiniteScroll', [])
-    .directive('jmInfiniteScroll', ['$interval',function ($interval) {
+    .directive('jmInfiniteScroll', ['$interval','$timeout',function ($interval,$timeout) {
         return {
             restrict: 'EA',
             scope: {
-                interval: "@"
+                interval: "@",
+                finish:"="
             },
             link: function(scope, element, attrs) {
                 var ele = element[0];
@@ -21,10 +22,31 @@ angular.module('jm.infiniteScroll', [])
                 var timer;
                 var offset = 0;
 
-                if (listHeight >= boxHeight) {
-                    $ele.append($ele.html());
-                    start();
-                    $box.on("mouseover",stop).on("mouseout",start);
+                /**
+                 *  fixed for ng-repeat.
+                 *  call this function after finished repeat render the list items
+                 *  the data should be copy one
+                 */
+                scope.$watch('finish', function (value) {
+                    if (value) {
+                        $timeout(function () {
+                            boxHeight = box.offsetHeight;
+                            listHeight = ele.offsetHeight;
+
+                            run(listHeight, boxHeight);
+                        })
+
+                    }
+                })
+
+                run(listHeight, boxHeight);
+
+                function run(listHeight, boxHeight) {
+                    if (listHeight >= boxHeight) {
+                        $ele.append($ele.html());
+                        start();
+                        $box.on("mouseover",stop).on("mouseout",start);
+                    }
                 }
 
                 function start()

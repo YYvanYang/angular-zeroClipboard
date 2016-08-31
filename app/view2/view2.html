@@ -8,12 +8,12 @@
 
 <div class="list-container">
     <ul id="myUL" jm-infinite-scroll interval="50">
-        <li>Hit the gym</li>
-        <li class="checked">Pay bills</li>
-        <li>Meet George</li>
-        <li>Buy eggs</li>
-        <li>Read a book</li>
-        <li>Organize office</li>
+        <li>1Hit the gym</li>
+        <li class="checked">2Pay bills</li>
+        <li>3Meet George</li>
+        <li>4Buy eggs</li>
+        <li>5Read a book</li>
+        <li>6Organize office</li>
     </ul>
 </div>
 
@@ -37,148 +37,23 @@
         </thead>
         </table>
 <div class="table">
-<table jm-infinite-scroll interval="50">
+<table jm-infinite-scroll interval="50" finish="finish">
     <tbody>
-        <tr>
-            <td>Jill</td>
-            <td>Smith</td>
-            <td>1</td>
-            <td>50</td>
-            <td>50</td>
-            <td>50</td>
-            <td>50</td>
-            <td>50</td>
-            <td>50</td>
-            <td>50</td>
-            <td>50</td>
-            <td>50</td>
+        <tr ng-repeat="item in listData" ng-init="$last && finished($last)">
+            <td>{{item[0]}}</td>
+            <td>{{item[1]}}</td>
+            <td>{{item[2]}}</td>
+            <td>{{item[3]}}</td>
+            <td>{{item[4]}}</td>
+            <td>{{item[5]}}</td>
+            <td>{{item[6]}}</td>
+            <td>{{item[7]}}</td>
+            <td>{{item[8]}}</td>
+            <td>{{item[9]}}</td>
+            <td>{{item[10]}}</td>
+            <td>{{item[11]}}</td>
         </tr>
-        <tr>
-            <td>Eve</td>
-            <td>Jackson</td>
-            <td>2</td>
-            <td>94</td>
-            <td>94</td>
-            <td>94</td>
-            <td>94</td>
-            <td>94</td>
-            <td>94</td>
-            <td>94</td>
-            <td>94</td>
-            <td>94</td>
-        </tr>
-        <tr>
-            <td>Adam</td>
-            <td>Johnson</td>
-            <td>3</td>
-            <td>67</td>
-            <td>67</td>
-            <td>67</td>
-            <td>67</td>
-            <td>67</td>
-            <td>67</td>
-            <td>67</td>
-            <td>67</td>
-            <td>67</td>
-        </tr>
-        <tr>
-            <td>Jill</td>
-            <td>Smith</td>
-            <td>4</td>
-            <td>50</td>
-            <td>50</td>
-            <td>50</td>
-            <td>50</td>
-            <td>50</td>
-            <td>50</td>
-            <td>50</td>
-            <td>50</td>
-            <td>50</td>
-        </tr>
-        <tr>
-            <td>Eve</td>
-            <td>Jackson</td>
-            <td>5</td>
-            <td>94</td>
-            <td>94</td>
-            <td>94</td>
-            <td>94</td>
-            <td>94</td>
-            <td>94</td>
-            <td>94</td>
-            <td>94</td>
-            <td>94</td>
-        </tr>
-        <tr>
-            <td>Adam</td>
-            <td>Johnson</td>
-            <td>6</td>
-            <td>67</td>
-            <td>67</td>
-            <td>67</td>
-            <td>67</td>
-            <td>67</td>
-            <td>67</td>
-            <td>67</td>
-            <td>67</td>
-            <td>67</td>
-        </tr>
-        <tr>
-            <td>Jill</td>
-            <td>Smith</td>
-            <td>7</td>
-            <td>50</td>
-            <td>50</td>
-            <td>50</td>
-            <td>50</td>
-            <td>50</td>
-            <td>50</td>
-            <td>50</td>
-            <td>50</td>
-            <td>50</td>
-        </tr>
-        <tr>
-            <td>Eve</td>
-            <td>Jackson</td>
-            <td>8</td>
-            <td>94</td>
-            <td>94</td>
-            <td>94</td>
-            <td>94</td>
-            <td>94</td>
-            <td>94</td>
-            <td>94</td>
-            <td>94</td>
-            <td>94</td>
-        </tr>
-        <tr>
-            <td>Adam</td>
-            <td>Johnson</td>
-            <td>9</td>
-            <td>67</td>
-            <td>67</td>
-            <td>67</td>
-            <td>67</td>
-            <td>67</td>
-            <td>67</td>
-            <td>67</td>
-            <td>67</td>
-            <td>67</td>
-        </tr>
-        <tr>
-        <td>Adam</td>
-        <td>Johnson</td>
-        <td>10</td>
-        <td>67</td>
-        <td>67</td>
-        <td>67</td>
-        <td>67</td>
-        <td>67</td>
-        <td>67</td>
-        <td>67</td>
-        <td>67</td>
-        <td>67</td>
-        </tr>
+
     </tbody>
 </table>
 </div>
